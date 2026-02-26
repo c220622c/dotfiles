@@ -1,0 +1,56 @@
+source ~/.config/vim/plugs.vim
+source ~/.config/vim/python-lsps.vim
+source ~/.config/vim/bindings.vim
+" set relative number
+set relativenumber
+set signcolumn=yes
+syntax on
+set exrc
+set showmode
+set showcmd
+set termguicolors
+set background=dark
+set t_Co=256
+set autoindent
+set shiftwidth=4
+set expandtab
+set softtabstop=4
+set tabstop=4
+set cursorline
+set cursorcolumn
+set textwidth=80
+set wrap
+set wrapmargin=2
+set ruler
+set showmatch
+set hlsearch
+set incsearch
+set smartcase
+"set spell spelllang=en_us
+set nobackup
+set noerrorbells
+set history=1000
+set autoread
+"colorscheme catppuccin_mocha
+"let g:airline_theme = 'catppuccin_mocha'
+set completeopt=menu,menuone,noinsert,noselect,preview,popup
+set pumheight=10                    " 最多显示 10 项
+" 使用 catppuccin 风格的自定义补全颜色
+hi! Pmenu guibg=#45475a guifg=#cdd6f4
+hi! PmenuSel guibg=#cba6f7 guifg=#1e1e2e
+hi! PmenuSbar guibg=#313244
+hi! PmenuThumb guibg=#89b4fa
+let g:Hexokinase_highlighters = ['background']
+" 可视模式：选中后用 <leader>y 复制到剪贴板
+vnoremap <leader>y :w !wl-copy<CR>
+
+" 普通模式：<leader>yy 复制当前行到剪贴板
+nnoremap <leader>yy :.w !wl-copy<CR>
+nnoremap <leader>y :.w !wl-copy<CR>
+
+" 普通模式：<leader>yw 复制一个单词到剪贴板
+nnoremap <leader>yw :normal! "gyw<CR>:call system('wl-copy', getreg('g'))<CR>
+
+" 从剪贴板粘贴到当前行下方
+nnoremap <leader>p :read !wl-paste --no-newline<CR>
+
