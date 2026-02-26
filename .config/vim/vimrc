@@ -41,6 +41,7 @@ hi! PmenuSel guibg=#cba6f7 guifg=#1e1e2e
 hi! PmenuSbar guibg=#313244
 hi! PmenuThumb guibg=#89b4fa
 let g:Hexokinase_highlighters = ['background']
+set rtp+=/opt/homebrew/opt/fzf
 " 可视模式：选中后用 <leader>y 复制到剪贴板
 vnoremap <leader>y :w !wl-copy<CR>
 
