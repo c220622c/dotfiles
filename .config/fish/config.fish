@@ -10,7 +10,7 @@ set -gx XDG_CACHE_HOME $HOME/.cache
 set -gx MPD_HOST $HOME/.config/mpd/socket
 set -gx LEDGER_FILE $HOME/Documents/finance/wzj.journal
 # starship
-starship init fish | source
+#starship init fish | source
 # change Greeting
 function fish_greeting
     echo Now is (set_color yellow)(date +%T)
