@@ -22,9 +22,11 @@ return {
 		picker = {
 			sources = {
 				explorer = {
+                    hidden = true,
 					-- your explorer picker configuration comes here
 					-- or leave it empty to use the default settings
 				},
+                files = {hidden = true},
 			},
 		},
 		indent = {},

@@ -4,11 +4,16 @@ end
 # vim setup
 set -gx EDITOR nvim
 # path setup    
-set -a -gx fish_user_paths $HOME/.local/bin
-set -a -gx fish_user_paths $HOME/.cargo/bin
-set -gx XDG_CACHE_HOME $HOME/.cache
-set -gx MPD_HOST $HOME/.config/mpd/socket
-set -gx LEDGER_FILE $HOME/Documents/finance/wzj.journal
+#set -a -gx fish_user_paths $HOME/.local/bin
+#set -a -gx fish_user_paths $HOME/.cargo/bin
+#set -gx XDG_CACHE_HOME $HOME/.cache
+set -gx XDG_CONFIG_HOME $HOME/.config
+set -gx LESSHISTFILE $HOME/.profile/less/history
+set -gx TASKRC $HOME/.config/task/taskrc
+#set -gx MPD_HOST $HOME/.config/mpd/socket
+#set -gx LEDGER_FILE $HOME/Documents/finance/wzj.journal
+#fish_add_path /opt/homebrew/bin
+fish_add_path $HOME/scripts/
 # starship
 #starship init fish | source
 # change Greeting
@@ -27,3 +32,4 @@ function y
     end
     rm -f -- "$tmp"
 end
+
