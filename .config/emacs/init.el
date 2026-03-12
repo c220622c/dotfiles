@@ -18,16 +18,27 @@
 (add-hook 'prog-mode-hook #'show-paren-mode) ; highlight brackets in prog-mode
 (column-number-mode t)            ; show line number in mode line
 (global-auto-revert-mode t)         ; refresh buffer if edited by other processes
+(when (display-graphic-p) (toggle-scroll-bar -1)) ; 图形界面时关闭滚动条
 (setq make-backup-files nil)         ; no file backup
 (add-hook 'prog-mode-hook #'hs-minor-mode)  ;enable fold in prog-mode
-(add-hook 'text-mode-hook 'flyspell-mode) ; enable spell check in text mode
 (global-display-line-numbers-mode 1)     ;show line number in window
-(setq custom-file (concat user-emacs-directory "custom.el"))
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize);;mepla setup
 (load-theme 'catppuccin :no-confirm) ;; load catppuccin theme
+(setq custom-file "~/.config/emacs/custom.el")
+(load custom-file)
+(use-package hydra
+ :ensure t)
+(use-package use-package-hydra
+ :ensure t
+ :after hydra)
+ ; use hydra to manage bindings
 (require 'init-ivy)
-(provide 'init)
+(require 'init-keys)
+(require 'init-git)
+(require 'init-org)
+(require 'init-theme)
+(provide 'init) 
 
 ;;; init.el ends here

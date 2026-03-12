@@ -1,0 +1,44 @@
+;;; init-keys.el --- Cursor movement and Leader configuration -*- lexical-binding: t -*-
+
+(use-package bind-key
+  :ensure t
+  :config
+  ;; 使用 bind-keys* 强制覆盖所有模式下的 C-hjkl，确保它们始终用于移动
+  (bind-keys*
+   ("C-h" . backward-char)
+   ("C-j" . next-line)
+   ("C-k" . previous-line)
+   ("C-l" . forward-char)))
+
+;; 设置 Hydra 作为 Leader 键管理 (M-m 触发)
+(defhydra hydra-leader (:color blue :hint nil)
+  "
+^搜索^              ^文件/Buffer^       ^Git^
+^^^^^^^^-------------------------------------------------
+_s_: Swiper         _f_: 查找文件       _g_: Magit Status
+_j_: Git Grep       _b_: 切换 Buffer    _q_: 退出
+_k_: Counsel Ag     _l_: 最近文件
+"
+  ("s" swiper-isearch)
+  ("j" counsel-git-grep)
+  ("k" counsel-ag)
+  ("f" counsel-find-file)
+  ("b" ivy-switch-buffer)
+  ("l" counsel-recentf)
+  ("g" magit-status)
+  ("q" nil "Quit" :color blue))
+
+;; 将 Option + m 设为 Leader 键
+(keymap-global-set "M-m" #'hydra-leader/body)
+
+;; 基础辅助
+(use-package marginalia
+  :ensure t
+  :init (marginalia-mode))
+
+(use-package which-key
+  :ensure t 
+  :init (which-key-mode))
+
+(provide 'init-keys)
+;;; init-keys.el ends here

@@ -5,7 +5,6 @@
     (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
     (add-to-list 'default-frame-alist '(ns-appearance . dark))
     (setq frame-title-format nil))
-(when (display-graphic-p) (toggle-scroll-bar -1)) ;no scroll bar in Gui
 (tool-bar-mode -1)              ; no tool bar
 (provide 'early-init)
 ;;end of file
