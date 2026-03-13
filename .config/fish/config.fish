@@ -10,7 +10,7 @@ set -gx EDITOR nvim
 set -gx XDG_CONFIG_HOME $HOME/.config
 set -gx LESSHISTFILE $HOME/.profile/less/history
 set -gx TASKRC $HOME/.config/task/taskrc
-#set -gx MPD_HOST $HOME/.config/mpd/socket
+set -gx MPD_HOST $HOME/.config/mpd/socket
 #set -gx LEDGER_FILE $HOME/Documents/finance/wzj.journal
 #fish_add_path /opt/homebrew/bin
 fish_add_path $HOME/scripts/
