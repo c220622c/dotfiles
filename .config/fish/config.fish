@@ -11,6 +11,7 @@ set -gx XDG_CONFIG_HOME $HOME/.config
 set -gx LESSHISTFILE $HOME/.profile/less/history
 set -gx TASKRC $HOME/.config/task/taskrc
 set -gx MPD_HOST $HOME/.config/mpd/socket
+set -gx GTK2_RC_FILES $HOME/.config/gtk-2.0/gtkrc
 #set -gx LEDGER_FILE $HOME/Documents/finance/wzj.journal
 #fish_add_path /opt/homebrew/bin
 fish_add_path $HOME/scripts/
@@ -19,6 +20,9 @@ fish_add_path $HOME/scripts/
 # change Greeting
 function fish_greeting
     echo Now is (set_color yellow)(date +%T)
+end
+function opd -d 'open proxy dashboard'
+    xdg-open http://localhost:2023/
 end
 # eza setup
 function lll -d 'use eza to show more'
@@ -32,4 +36,3 @@ function y
     end
     rm -f -- "$tmp"
 end
-

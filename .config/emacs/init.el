@@ -5,9 +5,9 @@
 ;; a number of other files.
 
 ;;; Code:
-(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory)) ; exceute lisp folder
-(defconst *spell-check-support-enabled* nil) ; disable spell-check,enable with t
-(defconst *is-a-mac* (eq system-type 'darwin)) ;yes,i use macbook
+
+(add-to-list 'load-path "~/.config/emacs/lisp/") ;
+(defconst *spell-check-support-enabled* nil) 
 (let ((normal-gc-cons-threshold (* 20 1024 1024))
    (init-gc-cons-threshold (* 128 1024 1024)))
  (setq gc-cons-threshold init-gc-cons-threshold)
@@ -25,20 +25,10 @@
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize);;mepla setup
-(load-theme 'catppuccin :no-confirm) ;; load catppuccin theme
 (setq custom-file "~/.config/emacs/custom.el")
 (load custom-file)
-(use-package hydra
- :ensure t)
-(use-package use-package-hydra
- :ensure t
- :after hydra)
- ; use hydra to manage bindings
-(require 'init-ivy)
-(require 'init-keys)
-(require 'init-git)
-(require 'init-org)
 (require 'init-theme)
-(provide 'init) 
-
+(require 'init-org)
+(require 'init-keys) ; disable due to key conflicts,may turn to spacemacs
+(provide 'init)
 ;;; init.el ends here

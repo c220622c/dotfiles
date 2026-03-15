@@ -12,7 +12,7 @@
 		// Named workspaces
 		// (you need to configure them in niri)
 		"browser": "",
-		"discord": "",
+		"discord": "",
 		"chat": "<b></b>",
 
 		// Icons by state
@@ -23,8 +23,9 @@
 "niri/window": {
 	"format": "{title}",
 	"rewrite": {
-		"(.*) - Mozilla Firefox": "🌎 $1",
-		"(.*) - zsh": "> [$1]"
+		"(.*) — Firefox Developer Edition": "󰈹  $1",
+		"(.*) - nvim": " [$1]",
+		"(.*) - fish": " [$1]"
 	}
 },
     "tray": {
