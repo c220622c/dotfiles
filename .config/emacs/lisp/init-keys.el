@@ -1,3 +1,4 @@
+;;; use ctrl + h/j/k/l to move cursor
 (global-set-key (kbd "C-h") nil)   
 (global-set-key (kbd "C-j") nil)       
 (global-set-key (kbd "C-k") nil)   
