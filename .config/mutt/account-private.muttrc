@@ -1,0 +1,13 @@
+set folder = "~/Documents/mail/account-private/"
+unmailboxes *
+set spoolfile = "+INBOX"
+unset record # outlook and gmail auto saves sent to here
+set trash = "+已删除邮件" # delete mails will be saved to here
+set postponed = "+草稿箱"
+mailboxes "=INBOX" "=草稿箱" "=已发送邮件" "=垃圾邮件" "=已删除邮件" 
+
+set smtp_url = "smtps://jackweng@zohomail.cn@smtp.zoho.com.cn:465"
+set smtp_pass = "ZynCnsCQub2N"
+set realname = "Zijie Weng"
+set from=jackweng@zohomail.cn
+set ssl_force_tls = yes

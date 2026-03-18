@@ -1,0 +1,59 @@
+## Account1
+IMAPAccount account-dhu
+#Host 111.124.200.37
+Host imaphz.qiye.163.com
+Port 993
+User 230250329@mail.dhu.edu.cn
+#PassCmd "/usr/share/neomutt/oauth2/mutt_oauth2.py --decryption-pipe 'gpg --decrypt --pinentry-mode loopback' -t ~/.cache/mutt/oauth-account-private"
+Pass P4$%hQVn7GWU%vqT
+TLSType IMAPS
+AuthMechs LOGIN
+
+IMAPStore account-dhu-remote
+Account account-dhu
+
+MaildirStore account-dhu-local
+Path ~/Documents/mail/account-dhu/
+Inbox ~/Documents/mail/account-dhu/INBOX
+SubFolders Verbatim
+
+Channel account-dhu
+Far :account-dhu-remote:
+Near :account-dhu-local:
+Patterns *
+Expunge both
+CopyArrivalDate yes
+Sync All
+Create Near
+SyncState *
+
+
+
+
+
+## Account2
+IMAPAccount account-private
+Host imap.zoho.com.cn
+Port 993
+User jackweng@zohomail.cn
+Pass ZynCnsCQub2N
+TLSType IMAPS
+AuthMechs LOGIN
+
+IMAPStore account-private-remote
+Account account-private
+
+MaildirStore account-private-local
+Path ~/Documents/mail/account-private/
+Inbox ~/Documents/mail/account-private/INBOX
+SubFolders Verbatim
+
+Channel account-private
+Far :account-private-remote:
+Near :account-private-local:
+Patterns *
+Expunge both
+CopyArrivalDate yes
+Sync All
+Create Near
+SyncState *

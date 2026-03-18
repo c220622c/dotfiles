@@ -1,0 +1,21 @@
+set editor = "nvim"
+set index_format="%3C %Z %[%Y-%m-%d %H:%M] %-12.12L %<l?%4l&%4c> %s"
+set auto_tag = yes
+## sidebar
+set sidebar_width=18
+set sidebar_visible
+set sidebar_short_path
+set sidebar_folder_indent
+set sidebar_format = "%B %* [%?N?%N / ?%S]"
+set mail_check_stats
+source "~/.config/mutt/bindings.muttrc"
+source "~/.config/mutt/account-dhu.muttrc"
+source "~/.config/mutt/account-private.muttrc"
+## switch accounts (,+n)
+folder-hook 'account-dhu' 'source ~/.config/mutt/account-dhu.muttrc'
+macro index ,1 "<enter-command>unmailboxes *<enter><enter-command>source ~/.config/mutt/account-dhu.muttrc<enter><sync-mailbox><change-folder>!<enter>"
+folder-hook 'account-private' 'source ~/.config/mutt/account-private.muttrc'
+macro index ,2 "<enter-command>unmailboxes *<enter><enter-command>source ~/.config/mutt/account-private.muttrc<enter><sync-mailbox><change-folder>!<enter>"
+
+##folder-hook 'account-unixchad' 'source ~/.config/mutt/account-unixchad.muttrc'
+##macro index ,3 "<enter-command>unmailboxes *<enter><enter-command>source ~/.config/mutt/account-unixchad.muttrc<enter><sync-mailbox><change-folder>!<enter>"

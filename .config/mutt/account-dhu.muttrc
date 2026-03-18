@@ -1,0 +1,15 @@
+set folder = "~/Documents/mail/account-dhu/"
+unmailboxes *
+set spoolfile = "+INBOX"
+unset record # outlook and gmail auto saves sent to here
+set trash = "+已删除" # delete mails will be saved to here
+set postponed = "+草稿箱"
+mailboxes "=INBOX" "=草稿箱" "=已发送" "=垃圾邮件" "=已删除" 
+
+set smtp_url = "smtps://230250329@mail.dhu.edu.cn@smtphz.qiye.163.com:994"
+set smtp_pass = "P4$%hQVn7GWU%vqT"
+set realname = "Zijie Weng"
+#set smtp_authenticators = "xoauth2"
+#set smtp_oauth_refresh_command = "/usr/share/neomutt/oauth2/mutt_oauth2.py --decryption-pipe 'gpg --decrypt --pinentry-mode default' ~/.cache/mutt/oauth-account2"
+set from=230250329@mail.dhu.edu.cn
+set ssl_force_tls = yes

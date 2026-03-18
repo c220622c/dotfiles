@@ -1,0 +1,13 @@
+data.location=~/.config/task
+news.version=3.4.2
+# General decoration
+color.label=magenta
+color.label.sort=magenta
+color.alternate=
+color.header=cyan
+color.footnote=yellow
+color.warning=bold red
+color.error=white on red
+color.debug=blue
+confirmation=off
+verbose=blank,footnote,label,new-id,affected,edit,special,project,sync,unwait

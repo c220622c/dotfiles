@@ -1,0 +1,11 @@
+.config/emacs/.cache/
+.config/emacs/eln-cache/
+.config/emacs/elpa/*
+.config/emacs/auto-save-list/
+.config/emacs/rime
+/.config/bat/.DS_Store
+/.config/btop/themes/.DS_Store
+/.config/btop/.DS_Store
+/.DS_Store
+/.config/.DS_Store
+/.config/cava

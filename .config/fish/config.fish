@@ -1,0 +1,38 @@
+if status is-interactive
+    # Commands to run in interactive sessions can go here
+end
+# vim setup
+set -gx EDITOR nvim
+# path setup    
+#set -a -gx fish_user_paths $HOME/.local/bin
+#set -a -gx fish_user_paths $HOME/.cargo/bin
+#set -gx XDG_CACHE_HOME $HOME/.cache
+set -gx XDG_CONFIG_HOME $HOME/.config
+set -gx LESSHISTFILE $HOME/.profile/less/history
+set -gx TASKRC $HOME/.config/task/taskrc
+set -gx MPD_HOST $HOME/.config/mpd/socket
+set -gx GTK2_RC_FILES $HOME/.config/gtk-2.0/gtkrc
+#set -gx LEDGER_FILE $HOME/Documents/finance/wzj.journal
+#fish_add_path /opt/homebrew/bin
+fish_add_path $HOME/scripts/
+# starship
+#starship init fish | source
+# change Greeting
+function fish_greeting
+    echo Now is (set_color yellow)(date +%T)
+end
+function opd -d 'open proxy dashboard'
+    xdg-open http://localhost:2023/
+end
+# eza setup
+function lll -d 'use eza to show more'
+    eza --long --tree --level=2 --icons=always --all
+end
+function y
+    set tmp (mktemp -t "yazi-cwd.XXXXXX")
+    command yazi $argv --cwd-file="$tmp"
+    if read -z cwd <"$tmp"; and [ "$cwd" != "$PWD" ]; and test -d "$cwd"
+        builtin cd -- "$cwd"
+    end
+    rm -f -- "$tmp"
+end

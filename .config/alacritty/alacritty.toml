@@ -1,0 +1,6 @@
+[window]
+decorations = "Full"
+opacity = 0.95
+[font]
+normal = {family = "Maple Mono NL NF CN"}
+size = 13
