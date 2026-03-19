@@ -8,6 +8,8 @@ set sidebar_short_path
 set sidebar_folder_indent
 set sidebar_format = "%B %* [%?N?%N / ?%S]"
 set mail_check_stats
+set mailcap_path = ~/.config/mutt/mailcap
+auto_view text/html
 source "~/.config/mutt/bindings.muttrc"
 source "~/.config/mutt/account-dhu.muttrc"
 source "~/.config/mutt/account-private.muttrc"

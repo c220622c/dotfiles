@@ -10,4 +10,6 @@
 (global-set-key (kbd "C-c a") 'org-agenda)
 (setq org-log-done 'time)
 (setq calendar-week-start 1)            ;设置星期一为每周的第一天
+(setq org-todo-keywords
+'((sequence "TODO" "STARTED" "WAITING" "DONE")))
 (provide 'init-org)
