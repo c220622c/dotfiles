@@ -1,3 +1,2 @@
 # My personal Macos/arch 
-## Neovim  
- brew install fzf
+the Master branch is for Arch Linux
