@@ -1,0 +1,474 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "timestamp": true
+  },
+  "dns": {
+    "rules": [
+      {
+        "clash_mode": "Proxy",
+        "server": "remote"
+      },
+      {
+        "clash_mode": "Direct",
+        "server": "local"
+      },
+      {
+        "rule_set": ["geosite-cn"],
+        "server": "local"
+      },
+      {
+        "rule_set": ["category-ads-all"],
+        "server": "block"
+      }
+    ],
+    "servers": [
+      {
+        "type": "https",
+        "server": "1.1.1.1",
+        "detour": "Available",
+        "tag": "remote"
+      },
+      {
+        "type": "https",
+        "server": "223.5.5.5",
+        "tag": "local"
+      },
+      {
+        "type": "hosts",
+        "path": [],
+        "predefined": {},
+        "tag": "block"
+      },
+      {
+        "type": "local"
+      }
+    ],
+    "strategy": "prefer_ipv4"
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true
+    }
+  },
+  "inbounds": [
+    {
+      "address": ["172.18.0.1/30", "fdfe:dcba:9876::1/126"],
+      "route_address": ["0.0.0.0/1", "128.0.0.0/1", "::/1", "8000::/1"],
+      "route_exclude_address": [
+        "192.168.0.0/16",
+        "10.0.0.0/8",
+        "172.16.0.0/12",
+        "fc00::/7"
+      ],
+      "auto_route": true,
+      "strict_route": true,
+      "type": "tun"
+    },
+    {
+      "listen": "127.0.0.1",
+      "listen_port": 2333,
+      "tag": "mixed-in",
+      "type": "mixed",
+      "users": []
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "Available",
+      "default": "US-01", 
+    "outbounds": [ "HK-01", "HK-02", "HK-03", "TW-01", "TW-02", "TW-03", "SG-01", "SG-02", "SG-03", "JP-01", "JP-02", "JP-03", "US-01", "US-02", "US-03", "RU-01", "CA-01", "IN-01", "TR-01", "AU-01", "GB-01", "NL-01", "DE-01", "TH-01", "KR-01", "PH-01", "KR-02", "MA-01"]
+    },
+    {
+      "type": "trojan",
+      "tag": "HK-01",
+      "server": "119.91.21.228",
+      "server_port": 4005,
+      "password": "2882a58d-c72a-3ea6-b118-ea4a15c79f6d",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.baidu.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "HK-02",
+      "server": "119.91.21.228",
+      "server_port": 4006,
+      "password": "2882a58d-c72a-3ea6-b118-ea4a15c79f6d",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.baidu.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "HK-03",
+      "server": "119.91.21.228",
+      "server_port": 4007,
+      "password": "2882a58d-c72a-3ea6-b118-ea4a15c79f6d",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.baidu.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "TW-01",
+      "server": "119.91.21.228",
+      "server_port": 4003,
+      "password": "2882a58d-c72a-3ea6-b118-ea4a15c79f6d",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.baidu.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "TW-02",
+      "server": "119.91.21.228",
+      "server_port": 4004,
+      "password": "2882a58d-c72a-3ea6-b118-ea4a15c79f6d",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.baidu.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "TW-03",
+      "server": "119.91.21.228",
+      "server_port": 4027,
+      "password": "2882a58d-c72a-3ea6-b118-ea4a15c79f6d",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.baidu.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "SG-01",
+      "server": "119.91.21.228",
+      "server_port": 4000,
+      "password": "2882a58d-c72a-3ea6-b118-ea4a15c79f6d",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.baidu.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "SG-02",
+      "server": "119.91.21.228",
+      "server_port": 4008,
+      "password": "2882a58d-c72a-3ea6-b118-ea4a15c79f6d",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.baidu.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "SG-03",
+      "server": "119.91.21.228",
+      "server_port": 4012,
+      "password": "2882a58d-c72a-3ea6-b118-ea4a15c79f6d",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.baidu.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "JP-01",
+      "server": "119.91.21.228",
+      "server_port": 4002,
+      "password": "2882a58d-c72a-3ea6-b118-ea4a15c79f6d",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.baidu.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "JP-02",
+      "server": "119.91.21.228",
+      "server_port": 4010,
+      "password": "2882a58d-c72a-3ea6-b118-ea4a15c79f6d",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.baidu.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "JP-03",
+      "server": "119.91.21.228",
+      "server_port": 4029,
+      "password": "2882a58d-c72a-3ea6-b118-ea4a15c79f6d",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.baidu.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "US-01",
+      "server": "119.91.21.228",
+      "server_port": 4001,
+      "password": "2882a58d-c72a-3ea6-b118-ea4a15c79f6d",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.baidu.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "US-02",
+      "server": "119.91.21.228",
+      "server_port": 4011,
+      "password": "2882a58d-c72a-3ea6-b118-ea4a15c79f6d",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.baidu.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "US-03",
+      "server": "119.91.21.228",
+      "server_port": 4009,
+      "password": "2882a58d-c72a-3ea6-b118-ea4a15c79f6d",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.baidu.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "RU-01",
+      "server": "119.91.21.228",
+      "server_port": 4059,
+      "password": "2882a58d-c72a-3ea6-b118-ea4a15c79f6d",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.baidu.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "CA-01",
+      "server": "119.91.21.228",
+      "server_port": 4065,
+      "password": "2882a58d-c72a-3ea6-b118-ea4a15c79f6d",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.baidu.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "IN-01",
+      "server": "119.91.21.228",
+      "server_port": 4058,
+      "password": "2882a58d-c72a-3ea6-b118-ea4a15c79f6d",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.baidu.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "TR-01",
+      "server": "119.91.21.228",
+      "server_port": 4057,
+      "password": "2882a58d-c72a-3ea6-b118-ea4a15c79f6d",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.baidu.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "AU-01",
+      "server": "119.91.21.228",
+      "server_port": 4055,
+      "password": "2882a58d-c72a-3ea6-b118-ea4a15c79f6d",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.baidu.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "GB-01",
+      "server": "119.91.21.228",
+      "server_port": 4062,
+      "password": "2882a58d-c72a-3ea6-b118-ea4a15c79f6d",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.baidu.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "NL-01",
+      "server": "119.91.21.228",
+      "server_port": 4064,
+      "password": "2882a58d-c72a-3ea6-b118-ea4a15c79f6d",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.baidu.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "DE-01",
+      "server": "119.91.21.228",
+      "server_port": 4060,
+      "password": "2882a58d-c72a-3ea6-b118-ea4a15c79f6d",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.baidu.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "TH-01",
+      "server": "119.91.21.228",
+      "server_port": 4063,
+      "password": "2882a58d-c72a-3ea6-b118-ea4a15c79f6d",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.baidu.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "KR-01",
+      "server": "119.91.21.228",
+      "server_port": 4053,
+      "password": "2882a58d-c72a-3ea6-b118-ea4a15c79f6d",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.baidu.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "PH-01",
+      "server": "119.91.21.228",
+      "server_port": 4061,
+      "password": "2882a58d-c72a-3ea6-b118-ea4a15c79f6d",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.baidu.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "KR-02",
+      "server": "119.91.21.228",
+      "server_port": 4056,
+      "password": "2882a58d-c72a-3ea6-b118-ea4a15c79f6d",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.baidu.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "MA-01",
+      "server": "119.91.21.228",
+      "server_port": 4052,
+      "password": "2882a58d-c72a-3ea6-b118-ea4a15c79f6d",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.baidu.com",
+        "insecure": true
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    }
+  ],
+  "route": {
+    "auto_detect_interface": true,
+    "default_domain_resolver": "local",
+    "rules": [
+      {
+        "action": "sniff"
+      },
+      {
+        "protocol": "dns",
+        "action": "hijack-dns"
+      },
+      {
+        "clash_mode": "Direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "Proxy",
+        "outbound": "Available"
+      },
+      {
+        "rule_set": ["geosite-cn"],
+        "outbound": "direct"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct"
+      },
+      {
+        "rule_set": ["category-ads-all"],
+        "action": "reject"
+      }
+    ],
+    "rule_set": [
+      {
+        "tag": "geosite-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://fastly.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-cn.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "category-ads-all",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://fastly.jsdelivr.net/gh/SagerNet/sing-geosite@rule-set/geosite-category-ads-all.srs",
+        "download_detour": "direct"
+      }
+    ]
+  }
+}
