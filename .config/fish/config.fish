@@ -16,7 +16,7 @@ set -gx GTK2_RC_FILES $HOME/.config/gtk-2.0/gtkrc
 #fish_add_path /opt/homebrew/bin
 fish_add_path $HOME/scripts/
 # starship
-#starship init fish | source
+starship init fish | source
 # change Greeting
 function fish_greeting
     echo Now is (set_color yellow)(date +%T)

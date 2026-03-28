@@ -4,8 +4,8 @@
     // "width": 1280, // Waybar width
     // Choose the order of the modules
     "modules-left": ["niri/workspaces","niri/window"],
-    "modules-center": ["clock"],
-    "modules-right": ["network", "backlight", "battery", "custom/lock",],
+    "modules-center": [],
+    "modules-right": ["clock", "network", "backlight", "battery", "custom/lock",],
     "niri/workspaces": {
 	"format": "{icon}",
 	"format-icons": {
@@ -36,7 +36,7 @@
     "clock": {
         "timezone": "Asia/Shanghai",
         "format": "{:%Y/%m/%d %H:%M}",
-        "tooltip-format": "<span font='Maple Mono CN'>{calendar}</span>",
+        "tooltip-format": "<span font='BlexMono Nerd Font'>{calendar}</span>",
         "calendar": {
                     "mode"          : "year",
                     "mode-mon-col"  : 3,
