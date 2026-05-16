@@ -1,5 +1,4 @@
-return {
-	"nvim-mini/mini.nvim",
-	event = "VeryLazy",
-	version = false,
-}
+vim.pack.add({ 'https://github.com/nvim-mini/mini.nvim' })
+require("mini.pairs").setup()
+require("mini.comment").setup()
+

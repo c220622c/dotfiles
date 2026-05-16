@@ -78,7 +78,7 @@
     {
       "type": "selector",
       "tag": "Available",
-      "default": "US-01", 
+      "default": "HK-01", 
     "outbounds": [ "HK-01", "HK-02", "HK-03", "TW-01", "TW-02", "TW-03", "SG-01", "SG-02", "SG-03", "JP-01", "JP-02", "JP-03", "US-01", "US-02", "US-03", "RU-01", "CA-01", "IN-01", "TR-01", "AU-01", "GB-01", "NL-01", "DE-01", "TH-01", "KR-01", "PH-01", "KR-02", "MA-01"]
     },
     {
@@ -89,8 +89,8 @@
       "password": "2882a58d-c72a-3ea6-b118-ea4a15c79f6d",
       "tls": {
         "enabled": true,
-        "server_name": "www.baidu.com",
-        "insecure": true
+        "server_name": "www.appletls.com",
+        "insecure": false
       }
     },
     {
@@ -102,7 +102,7 @@
       "tls": {
         "enabled": true,
         "server_name": "www.baidu.com",
-        "insecure": true
+        "insecure": false
       }
     },
     {
@@ -114,7 +114,7 @@
       "tls": {
         "enabled": true,
         "server_name": "www.baidu.com",
-        "insecure": true
+        "insecure": false
       }
     },
     {
@@ -126,7 +126,7 @@
       "tls": {
         "enabled": true,
         "server_name": "www.baidu.com",
-        "insecure": true
+        "insecure": false
       }
     },
     {
@@ -138,7 +138,7 @@
       "tls": {
         "enabled": true,
         "server_name": "www.baidu.com",
-        "insecure": true
+        "insecure": false
       }
     },
     {
@@ -150,7 +150,7 @@
       "tls": {
         "enabled": true,
         "server_name": "www.baidu.com",
-        "insecure": true
+        "insecure": false
       }
     },
     {
@@ -162,7 +162,7 @@
       "tls": {
         "enabled": true,
         "server_name": "www.baidu.com",
-        "insecure": true
+        "insecure": false
       }
     },
     {
@@ -174,7 +174,7 @@
       "tls": {
         "enabled": true,
         "server_name": "www.baidu.com",
-        "insecure": true
+        "insecure": false
       }
     },
     {
@@ -186,7 +186,7 @@
       "tls": {
         "enabled": true,
         "server_name": "www.baidu.com",
-        "insecure": true
+        "insecure": false
       }
     },
     {
@@ -198,7 +198,7 @@
       "tls": {
         "enabled": true,
         "server_name": "www.baidu.com",
-        "insecure": true
+        "insecure": false
       }
     },
     {
@@ -210,7 +210,7 @@
       "tls": {
         "enabled": true,
         "server_name": "www.baidu.com",
-        "insecure": true
+        "insecure": false
       }
     },
     {
@@ -222,7 +222,7 @@
       "tls": {
         "enabled": true,
         "server_name": "www.baidu.com",
-        "insecure": true
+        "insecure": false
       }
     },
     {
@@ -234,7 +234,7 @@
       "tls": {
         "enabled": true,
         "server_name": "www.baidu.com",
-        "insecure": true
+        "insecure": false
       }
     },
     {
@@ -246,7 +246,7 @@
       "tls": {
         "enabled": true,
         "server_name": "www.baidu.com",
-        "insecure": true
+        "insecure": false
       }
     },
     {
@@ -258,7 +258,7 @@
       "tls": {
         "enabled": true,
         "server_name": "www.baidu.com",
-        "insecure": true
+        "insecure": false
       }
     },
     {
@@ -270,7 +270,7 @@
       "tls": {
         "enabled": true,
         "server_name": "www.baidu.com",
-        "insecure": true
+        "insecure": false
       }
     },
     {
@@ -282,7 +282,7 @@
       "tls": {
         "enabled": true,
         "server_name": "www.baidu.com",
-        "insecure": true
+        "insecure": false
       }
     },
     {
@@ -294,7 +294,7 @@
       "tls": {
         "enabled": true,
         "server_name": "www.baidu.com",
-        "insecure": true
+        "insecure": false
       }
     },
     {
@@ -306,7 +306,7 @@
       "tls": {
         "enabled": true,
         "server_name": "www.baidu.com",
-        "insecure": true
+        "insecure": false
       }
     },
     {
@@ -318,7 +318,7 @@
       "tls": {
         "enabled": true,
         "server_name": "www.baidu.com",
-        "insecure": true
+        "insecure": false
       }
     },
     {
@@ -330,7 +330,7 @@
       "tls": {
         "enabled": true,
         "server_name": "www.baidu.com",
-        "insecure": true
+        "insecure": false
       }
     },
     {
@@ -342,7 +342,7 @@
       "tls": {
         "enabled": true,
         "server_name": "www.baidu.com",
-        "insecure": true
+        "insecure": false
       }
     },
     {
@@ -354,7 +354,7 @@
       "tls": {
         "enabled": true,
         "server_name": "www.baidu.com",
-        "insecure": true
+        "insecure": false
       }
     },
     {
@@ -366,7 +366,7 @@
       "tls": {
         "enabled": true,
         "server_name": "www.baidu.com",
-        "insecure": true
+        "insecure": false
       }
     },
     {
@@ -378,7 +378,7 @@
       "tls": {
         "enabled": true,
         "server_name": "www.baidu.com",
-        "insecure": true
+        "insecure": false
       }
     },
     {
@@ -390,7 +390,7 @@
       "tls": {
         "enabled": true,
         "server_name": "www.baidu.com",
-        "insecure": true
+        "insecure": false
       }
     },
     {
@@ -402,7 +402,7 @@
       "tls": {
         "enabled": true,
         "server_name": "www.baidu.com",
-        "insecure": true
+        "insecure": false
       }
     },
     {
