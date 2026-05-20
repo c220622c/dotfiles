@@ -1,8 +1,36 @@
 {
   "plugins": {
+    "bufferline": {
+      "rev": "655133c3b4c3e5e05ec549b9f8cc2894ac6f51b3",
+      "src": "https://github.com/akinsho/bufferline.nvim"
+    },
+    "catppuccin": {
+      "rev": "426dbebe06b5c69fd846ceb17b42e12f890aedf1",
+      "src": "https://github.com/catppuccin/nvim"
+    },
+    "mini.completion": {
+      "rev": "6937ff1d7bf47ab58046c6685cc9057aa481ecb2",
+      "src": "https://github.com/nvim-mini/mini.completion"
+    },
     "mini.nvim": {
       "rev": "18797ed18f347d0d0da27fec28a67979b1207f70",
       "src": "https://github.com/nvim-mini/mini.nvim"
+    },
+    "mini.statusline": {
+      "rev": "e9e5c147385e5e0310ab79162dd08d0465e96d83",
+      "src": "https://github.com/nvim-mini/mini.statusline"
+    },
+    "orgmode": {
+      "rev": "98b3a2b7ff1475ddd921803df54558da22a0f354",
+      "src": "https://github.com/nvim-orgmode/orgmode"
+    },
+    "snacks.nvim": {
+      "rev": "ad9ede6a9cddf16cedbd31b8932d6dcdee9b716e",
+      "src": "https://github.com/folke/snacks.nvim"
+    },
+    "vimtex": {
+      "rev": "182ad387e3f3107699483606c9a2b6648f8437b2",
+      "src": "https://github.com/lervag/vimtex"
     }
   }
 }
